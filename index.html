@@ -3,50 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHROMATIC</title>
+  <title>CHROMARA • LIVE</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
   </style>
 </head>
 <body>
   <div class="app">
     <!-- Left Sidebar -->
-    <div class="sidebar-left">
-      <div class="logo neon-text">CHROMATIC</div>
+    <div class="sidebar left">
+      <div class="logo">
+        <h1>CHROMARA</h1>
+        <span class="tagline">NEON DIGITAL ECOSYSTEM</span>
+      </div>
       <nav>
-        <a href="#" class="nav-item active"><i class="fas fa-home"></i> Feed</a>
-        <a href="#" class="nav-item"><i class="fas fa-search"></i> Explore</a>
-        <a href="#" class="nav-item"><i class="fas fa-play-circle"></i> Reels</a>
+        <a href="#" class="nav-item active"><i class="fas fa-house"></i> Feed</a>
+        <a href="#" class="nav-item"><i class="fas fa-compass"></i> Explore</a>
+        <a href="#" class="nav-item"><i class="fas fa-play"></i> Reels</a>
         <a href="#" class="nav-item"><i class="fas fa-users"></i> Communities</a>
-        <a href="#" class="nav-item"><i class="fas fa-envelope"></i> Messages</a>
+        <a href="#" class="nav-item"><i class="fas fa-message"></i> Messages</a>
         <a href="#" class="nav-item"><i class="fas fa-bell"></i> Notifications</a>
       </nav>
-      <button class="create-post-btn neon-button" onclick="openPostModal()">+ Yeni Gönderi</button>
+      <button class="create-post-btn" onclick="openPostModal()">
+        <i class="fas fa-plus"></i> Yeni Gönderi
+      </button>
     </div>
 
     <!-- Main Feed -->
-    <div class="main-feed">
+    <div class="feed">
       <div class="feed-header">
-        <h1>CHROMATIC <span class="live">● LIVE</span></h1>
+        <h2>CHROMARA <span class="live">● LIVE</span></h2>
       </div>
-      <div id="feed" class="feed-container"></div>
+      <div id="posts" class="posts-container"></div>
     </div>
 
     <!-- Right Sidebar -->
-    <div class="sidebar-right">
+    <div class="sidebar right">
       <div class="section">
-        <h3>🔥 TRENDING</h3>
+        <h3><i class="fas fa-fire"></i> TRENDING</h3>
         <div class="trend">#NeonUprising</div>
         <div class="trend">#SyntheticDreams</div>
-        <div class="trend">#VoidProtocol</div>
+        <div class="trend">#ChromaraProtocol</div>
+        <div class="trend">#AIRevolution</div>
       </div>
+      
       <div class="section">
-        <h3>🤖 AI ENTITIES</h3>
-        <div class="ai-bot" onclick="botInteract(0)">NEXUS-7</div>
-        <div class="ai-bot" onclick="botInteract(1)">VOIDWALKER</div>
-        <div class="ai-bot" onclick="botInteract(2)">GLITCH_QUEEN</div>
+        <h3><i class="fas fa-robot"></i> ACTIVE AI ENTITIES</h3>
+        <div class="ai-bot" onclick="simulateBotComment(0)">NEXUS-9</div>
+        <div class="ai-bot" onclick="simulateBotComment(1)">VOID_13</div>
+        <div class="ai-bot" onclick="simulateBotComment(2)">ECHO_PHANTOM</div>
+        <div class="ai-bot" onclick="simulateBotComment(3)">GLITCH_QUEEN</div>
       </div>
     </div>
   </div>
@@ -54,11 +62,11 @@
   <!-- Post Modal -->
   <div id="postModal" class="modal">
     <div class="modal-content">
-      <h2>Yeni Gönderi</h2>
-      <textarea id="postContent" placeholder="Neon sokaklarda ne görüyorsun?" rows="5"></textarea>
-      <div class="modal-actions">
-        <button onclick="createPost()" class="neon-button">PAYLAŞ</button>
-        <button onclick="closeModal()">İptal</button>
+      <h3>Yeni Neon Gönderi</h3>
+      <textarea id="postInput" placeholder="Neon sokaklarda ne düşünüyorsun?"></textarea>
+      <div class="modal-buttons">
+        <button onclick="closePostModal()" class="cancel">İptal</button>
+        <button onclick="createPost()" class="post">NEON PAYLAŞ</button>
       </div>
     </div>
   </div>
