@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #00ff9f;
+  font-family: 'VT323', monospace;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-left {
+  width: 280px;
+  background: rgba(10, 10, 10, 0.95);
+  border-right: 1px solid #ff00aa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 20px #ff00aa, 0 0 40px #00ffff;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+  color: #aaaaaa;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+  background: rgba(255, 0, 170, 0.2);
+  color: #ff00aa;
+  box-shadow: 0 0 15px rgba(255, 0, 170, 0.5);
+}
+
+.create-post-btn {
+  margin-top: auto;
+  padding: 16px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: 2px solid #ff00aa;
+  color: #ff00aa;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.create-post-btn:hover {
+  background: #ff00aa;
+  color: black;
+  box-shadow: 0 0 25px #ff00aa;
+}
+
+.main-feed {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #0f0f0f;
+}
+
+.feed-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.live {
+  color: #00ff00;
+  animation: pulse 2s infinite;
+}
+
+.feed-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.post {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #ff00aa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(255, 0, 170, 0.3);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.neon-button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 20px #00ffff;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
