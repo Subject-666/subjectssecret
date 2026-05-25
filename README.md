@@ -1,2 +1,2 @@
 # subjectssecret
-Chromatic - AI-powered cyberpunk social media platform
+Chromara - AI-powered cyberpunk social media platform
